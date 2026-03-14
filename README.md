@@ -1,72 +1,131 @@
+# Crypto Companion
 
-## Project info
+![React](https://img.shields.io/badge/React-18-blue?logo=react)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.8-blue?logo=typescript)
+![Vite](https://img.shields.io/badge/Vite-5.4-purple?logo=vite)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-3.4-blue?logo=tailwindcss)
+![Supabase](https://img.shields.io/badge/Supabase-Backend-green?logo=supabase)
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+---
 
-## How can I edit this code?
+## Introducao
 
-There are several ways of editing your application.
+**Crypto Companion** e uma aplicacao web para **acompanhamento e gestao de criptomoedas**, construida com **React + TypeScript** e backend **Supabase**.
 
-**Use Lovable**
+O projeto permite visualizar dados de mercado, acompanhar portfolio de criptoativos e gerenciar investimentos com uma interface moderna e responsiva.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## Como Executar
 
-**Use your preferred IDE**
+### Pre-requisitos
+- Node.js 18+
+- npm ou bun
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Instalacao
+```bash
+# Clone o repositorio
+git clone https://github.com/LORRAN-DEV/crypto-companion-2.git
+cd crypto-companion-2
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+# Instale as dependencias
+npm install
 
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Inicie o servidor de desenvolvimento
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+### Acesso
+| Servico     | URL                    |
+|-------------|------------------------|
+| Frontend    | http://localhost:8080   |
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+---
 
-**Use GitHub Codespaces**
+## Arquitetura e Tecnologias
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### Stack Principal
+| Tecnologia        | Funcao                          |
+|-------------------|---------------------------------|
+| **React 18**      | Biblioteca de UI                |
+| **TypeScript**    | Tipagem estatica                |
+| **Vite**          | Build tool e dev server         |
+| **Tailwind CSS**  | Estilizacao utility-first       |
+| **shadcn/ui**     | Componentes de interface        |
+| **Supabase**      | Backend, auth e banco de dados  |
 
-## What technologies are used for this project?
+### Bibliotecas de Suporte
+| Biblioteca              | Funcao                          |
+|-------------------------|---------------------------------|
+| **React Router DOM**    | Roteamento SPA                  |
+| **TanStack React Query**| Gerenciamento de estado server  |
+| **React Hook Form**     | Gerenciamento de formularios    |
+| **Zod**                 | Validacao de schemas            |
+| **Recharts**            | Graficos e visualizacao de dados|
+| **Lucide React**        | Icones                          |
+| **Sonner**              | Notificacoes toast              |
+| **next-themes**         | Suporte a dark mode             |
+| **date-fns**            | Manipulacao de datas            |
 
-This project is built with:
+### Componentes UI (Radix UI)
+O projeto utiliza **shadcn/ui** com diversos componentes Radix:
+- Dialog, Dropdown, Accordion, Tabs
+- Tooltip, Popover, Toast
+- Carousel (Embla), Resizable Panels
+- Command Palette (cmdk)
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+---
 
-## How can I deploy this project?
+## Features
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+- Dashboard com graficos de mercado cripto (Recharts)
+- Dark Mode com alternancia de tema
+- Autenticacao via Supabase Auth
+- Design Responsivo com Tailwind CSS
+- Command Palette para navegacao rapida
+- Formularios com validacao em tempo real (Zod + React Hook Form)
+- Notificacoes toast para feedback do usuario
+- HMR com Vite para desenvolvimento rapido
 
-## Can I connect a custom domain to my Lovable project?
+---
 
-Yes, you can!
+## Scripts Disponiveis
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+```bash
+npm run dev       # Servidor de desenvolvimento
+npm run build     # Build para producao
+npm run preview   # Preview do build
+npm run lint      # Linting com ESLint
+npm run test      # Testes com Vitest
+```
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+---
+
+## Configuracao
+
+### Variaveis de Ambiente (`.env`)
+```bash
+VITE_SUPABASE_URL=<sua-url-supabase>
+VITE_SUPABASE_ANON_KEY=<sua-chave-publica>
+```
+
+### Estrutura de Configuracao
+| Arquivo               | Funcao                     |
+|-----------------------|----------------------------|
+| `vite.config.ts`      | Configuracao do Vite       |
+| `tailwind.config.ts`  | Tema e design system       |
+| `tsconfig.json`       | Configuracao TypeScript    |
+| `components.json`     | Configuracao shadcn/ui     |
+| `eslint.config.js`    | Regras de linting          |
+
+---
+
+## Resumo
+
+- Stack moderna com React 18 + TypeScript + Vite
+- UI profissional com shadcn/ui + Tailwind CSS
+- Backend serverless com Supabase
+- Graficos interativos para dados de mercado
+- Autenticacao e gerenciamento de sessao
+- Dark mode e design responsivo
+- Testes configurados com Vitest
